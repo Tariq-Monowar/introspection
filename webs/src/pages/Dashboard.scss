@@ -1,0 +1,265 @@
+.dashboard {
+  margin-left: 245px;
+  margin-top: 87px;
+
+  // padding: 20px;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media only screen and (max-width: 1060px) {
+    margin-left: 0px;
+    margin-top: 87px;
+  }
+
+  .dog-card {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    .dog-info {
+      display: flex;
+      align-items: center;
+      width: 330px;
+      .dog-img {
+        height: 120px;
+        width: 120px;
+        border-radius: 5px;
+        background-size: cover;
+        background-position: center;
+        margin-right: 22px;
+      }
+
+      .dog-details {
+        display: flex;
+        flex-direction: column;
+        .up {
+          margin-top: -5px;
+          .dog-name {
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom: 3px;
+            color: #232323;
+            font-family: "Segoe UI", "Roboto", cursive;
+            white-space: nowrap;
+          }
+
+          .dog-breed {
+            font-size: 17px;
+            color: #555;
+            // font-family: "Segoe UI", "Roboto", cursive;
+          }
+        }
+        .view-certificate-logic {
+          display: none;
+        }
+        .down {
+          margin-top: 20px;
+          .dog-name {
+            font-size: 13px;
+            color: #555;
+          }
+
+          .dog-breed {
+            margin-top: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c2c2c;
+          }
+        }
+      }
+    }
+
+    .dates {
+      margin-left: -20px;
+      display: none;
+
+      .date {
+        text-align: center;
+
+        p {
+          color: #4e4e4e;
+          font-size: 15px;
+          font-family: "Segoe UI", "Roboto", cursive;
+          margin-bottom: 3px;
+        }
+
+        span {
+          color: #555;
+          font-weight: bold;
+          font-family: "Segoe UI", "Roboto", cursive;
+        }
+      }
+      .alaing-date {
+        margin-bottom: 26px;
+      }
+    }
+
+    .date-lock {
+      text-align: center;
+      margin-bottom: -55px;
+      p {
+        color: #4e4e4e;
+        font-size: 15px;
+        font-family: "Segoe UI", "Roboto", cursive;
+        margin-bottom: 3px;
+      }
+      span {
+        color: #555;
+        font-weight: bold;
+        font-family: "Segoe UI", "Roboto", cursive;
+      }
+    }
+
+    @media only screen and (max-width: 895px) {
+      .date-lock {
+        display: none;
+      }
+      .dates {
+        display: block;
+      }
+    }
+
+    .actions {
+      // display: flex;
+      // gap: 10px;
+      margin-right: 8px;
+
+      button {
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .approve {
+        background-color: #4caf50;
+        color: white;
+        font-size: 17px;
+        padding: 0;
+        height: 36px;
+        width: 90px;
+      }
+
+      .decline {
+        background-color: #f44336;
+        color: white;
+        font-size: 17px;
+        padding: 0;
+        height: 36px;
+        width: 90px;
+      }
+
+      .view-certificate {
+        background-color: #cfe5f6; // #00aaff;
+        color: #0079b6;
+        margin-top: 33px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        height: 35px;
+        border: 1px solid #087db7;
+        margin-left: auto;
+
+        .icons {
+          font-size: 17px;
+          margin-left: 10px;
+        }
+      }
+    }
+    @media only screen and (max-width: 735px) {
+      .dates {
+        display: none;
+      }
+      .date-lock {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .dog-card {
+      .dog-info {
+        width: 300px;
+      }
+    }
+    .actions {
+      .approve {
+        display: none;
+      }
+      .decline {
+        display: none;
+      }
+      .view-certificate {
+        margin-bottom: -30px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 519px) {
+    .actions {
+      display: none;
+    }
+
+    .dog-card {
+      
+      
+     
+      .dog-info {
+        text-align: right;
+        width: 100%;
+        // display: flex;
+        // justify-content: space-between;
+         margin-right: 5px;
+        .dog-details {
+          margin-left: auto;
+          margin-right: 20px;
+          .view-certificate-logic {
+            display: block;
+            background-color: #cfe5f6; // #00aaff;
+            color: #0079b6;
+            // margin-top: 33px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            height: 30px;
+            width: 150px;
+            border: 1px solid #087db7;
+            margin-top: 20px;
+            border-radius: 5px;
+            margin-left: 25px;
+            .icons{
+              margin-left: 10px;
+            }
+
+            &:active {
+              transition: 0.2s;
+              transform: scale(0.95);
+            }
+    
+          }
+          .down {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 518px) {
+    
+  }
+}

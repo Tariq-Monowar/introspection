@@ -1,0 +1,60 @@
+.drower-container {
+  height: 100vh;
+  max-width: 260px;
+  overflow-x: hidden;
+  // overflow-y: scroll;
+  background-color: #0172b8;
+  //   position: relative;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+  float: left;
+  border-right: 1px solid #76b9e3;
+  img {
+    width: 220px;
+    margin: 15px 10px 10px 15px;
+  }
+  .element {
+    margin: 0px 15px 0px 13px;
+    .item {
+      display: flex;
+      // width: 100%;
+      background-color: #1079bb;
+      color: #fff;
+      margin: 10px 0px;
+      border-radius: 5px;
+      padding: 9px 10px;
+      text-decoration: none;
+      box-shadow: rgb(0 0 0 / 0%) 0px 1px 1px, rgb(0 0 0 / 8%) 1px 1px 6px;
+      &:active {
+        transition: 0.2s;
+        transform: scale(0.95);
+      }
+      .icon {
+        color: #fff;
+        font-size: 17px;
+        margin-top: 2px;
+        margin-right: 10px;
+      }
+
+      p {
+        color: #fff;
+
+        font-family: "Roboto", sans-serif;
+        font-size: 17px;
+      }
+    }
+    .active {
+      background: #ebf7ff;
+      box-shadow: rgba(24, 23, 23, 0.11) 1px 4px 8px,
+        rgb(0 0 0 / 10%) 5px 1px 6px;
+      .icon {
+        color: #1a1a1a;
+      }
+      p {
+        color: #1a1a1a;
+      }
+    }
+  }
+}
